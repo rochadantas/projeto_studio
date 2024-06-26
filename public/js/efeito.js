@@ -64,7 +64,10 @@ dados, e sera maontada com o auxilio desse item*/
     });
 /*menu nossa missão onde trara a informações dos objetivo do studio beleza */
     if(iten == "nossamissao"){
-        alert("esse sera incrivel")
+        $("#demonstrativo").append(montar_texto =>{
+            return "<p>Oferecer tratamentos de beleza de alta qualidade, feitos por profissionais altamente treinados e qualificados, em constante melhoria.</br>Atender nossos clientes com excelência, com dedicação e atenção excepcionais para satisfazê-los. Esperamos que eles se sintam bem em nosso salão e saiam com a auto-estima maior do que quando entraram.</br>Atender cada cliente de forma personalizada, para que eles se sintam especiais e para que possamos realçar a beleza única de cada um.</p>"
+        });
+        $("#lista").css("display","none");
     }
 })
 
