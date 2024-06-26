@@ -1,0 +1,199 @@
+body{
+    display: flex;
+    position: absolute;
+    width:100%;
+    justify-content: center;
+}
+/*layout corpo do sistema*/
+.contanier{
+    display: grid;
+    grid-template-areas:
+        "topo topo topo"
+        "menu menu menu"
+        "conteudo conteudo conteudo"
+        "rodape rodape rodape"
+    ;
+    grid-gap: 5px;
+    grid-template-columns: 150px 700px 150px;
+    grid-template-rows: 200px 40px 350px 200px;
+    position: relative;
+   
+}
+/*iten de visualizaçao*/
+.box{
+    display: block;
+    background: rgb(235, 241, 235);
+    padding: 5px;
+    margin: 0 2.5px;
+}
+.box p{
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    margin-top: 0px;
+}
+.box h3{
+    background: rgba(179, 173, 173, 0.425);
+    margin-top: 0.5px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+/*layout do topo com sua itens*/
+.topo{
+    display: flex;
+    grid-area: topo;
+    align-items: center;
+    justify-content: center;
+    background: rgb(248, 11, 11);
+}
+.topo h1{
+    font-size: 60px;
+}
+strong{
+    color: white;
+}
+
+/*layout do menu com o seus itens*/
+.menu{
+    display: flex;
+    grid-area: menu;
+    align-items: center;
+    justify-content:end; 
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+}
+.submenu{
+    display:none;
+    float: left;
+    position: absolute;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 15px;
+    background: rgba(241, 236, 236, 0);
+    padding: 5px;
+    width: 85px;
+    text-align: center;
+    font: bolder;
+}
+.menu li{
+    cursor: pointer;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+li:hover{
+    animation-delay: 15ms;
+    background: rgba(41, 40, 40, 0.199);
+    color: black;
+}
+li:active{
+    background: rgba(49, 49, 47, 0.575);
+    color: white;
+}
+/*layout do conteudo do site*/
+.conteudo{
+    display: flex;
+    width: 100%;
+    grid-area: conteudo;
+    margin: 0 auto;
+    position: relative;
+}
+#demonstrativo{
+    display: flex;   
+    width: 100%;
+    justify-content: center;
+}
+#demonstrativo p{
+    font-size: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+#lista{
+    display: none;
+    width: 30%;
+    grid-auto-rows: auto;
+}
+/*disposicao da home*/
+.display-imagem{
+    display: flexbox;
+}
+/*layout do rodape com seu itens*/
+.rodape{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;    
+    grid-area: rodape;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+/*layout do rodape para destaque de informações e promoções*/
+.rede-social{
+    grid-area: 1/1;
+}
+.informacao{
+    grid-area:1/2
+}
+/*cartao de destaque em rodape*/
+.destaque{
+    grid-area: 1/3;
+}
+/*layout formulario para contato, com a imagens*/
+#formulario{
+    display: grid;
+    grid-template-areas: "imagem formulario" ;
+    grid-auto-rows: 50px 50px 50px;
+    width: 75%;
+    font-size: 20px;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+#formulario form{
+    padding: 9px;
+    display: block;
+    grid-area: formulario;
+    margin-top: 20px;
+}
+#formulario img{
+    grid-area: imagem;
+    width: 250px;
+    height: 285px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+#formulario input{
+    font-size: 20px;
+    width: 100px;
+    margin-bottom: 5px;
+}
+#formulario textarea{
+    font-size: 20px;
+}
+#formulario #btenviar {
+    width: 100px;
+    background: rgba(255, 166, 0, 0.295);
+    border-radius: 5px;
+    font-size: 20px;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 1px 1px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 5px;
+}
+#formulario #btcancela{
+    width: 100px;
+    background: rgba(255, 166, 0, 0.295);
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: 20px;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 1px 1px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 5px;
+}
+#formulario input{
+    width: 70%;
+    border-radius: 5px;
+}
+/**/
